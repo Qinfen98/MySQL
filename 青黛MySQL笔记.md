@@ -1182,7 +1182,16 @@ iterate：类似于continue，用于结束本次循环，继续下一次
 
 
 
+##开窗函数
 
+ 与聚合函数一样，开窗函数也是对行集组进行聚合计算，但是它不像普通聚合函数那样每组只返回一个值，开窗函数可以为每组返回多个值，因为开窗函数所执行聚合计算的行集组是窗口。
+
+开窗函数基本语法(Syntax)
+**function(expression) OVER (PARTITION BY column  ORDER BY column ASC/DESC ROWs[.….])**
+
+over必须有，其他的不是必须的。
+
+partition(分割)
 
 
 
